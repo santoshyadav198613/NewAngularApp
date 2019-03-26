@@ -1,0 +1,30 @@
+<h1>
+  Add Movie
+</h1>
+
+{{movie | json}}
+{{movieForm.invalid | json }}
+{{movieForm.valid | json }}
+{{movieForm.pristine | json }}
+{{movieForm.dirty | json }}
+
+<form #movieForm="ngForm" (submit)="saveMovie()">
+  <div class="form-group">
+    <input #id="ngModel" required type="number" class="form-control" [(ngModel)]="movie.id" name="id" placeholder="Id">
+    {{id.invalid}}
+    {{id.valid}}
+    {{id.errors | json}}
+  </div>
+  <div class="form-group">
+    <input required minlength="3" maxlength="8" type="text" class="form-control" [(ngModel)]="movie.title" name="title" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <input type="text" required class="form-control" [(ngModel)]="movie.author" name="author" placeholder="author">
+  </div>
+  <div class="form-group">
+    <input type="number" required class="form-control" [(ngModel)]="movie.year" name="year" placeholder="Year">
+  </div>
+  <div class="form-group">
+    <button [disabled]="movieForm.invalid" type="submit" class="btn btn-primary" >Add Movie</button>
+  </div>
+</form>

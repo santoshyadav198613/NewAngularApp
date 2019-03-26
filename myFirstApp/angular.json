@@ -20,7 +20,8 @@
             "tsConfig": "projects/ecomapp/tsconfig.app.json",
             "assets": [
               "projects/ecomapp/src/favicon.ico",
-              "projects/ecomapp/src/assets"
+              "projects/ecomapp/src/assets",
+              "projects/ecomapp/src/assets/booklist.json"
             ],
             "styles": [
               "projects/ecomapp/src/styles.css"
