@@ -38,6 +38,8 @@ export class EmployeeComponent implements OnInit {
   name = 'Rajesh';
   department = "IT";
   isHidden = false;
+
+  className= "alert alert-danger";
   constructor() { }
 
   ngOnInit() {

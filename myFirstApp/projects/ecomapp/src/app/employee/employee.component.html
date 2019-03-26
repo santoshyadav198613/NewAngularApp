@@ -2,21 +2,16 @@
   Employee Name {{name}}
 </h1>
 
-<div [hidden]="isHidden" [innerText]="department">
+<div [ngClass]="className" [hidden]="isHidden" [innerText]="department">
 </div>
 
-<input class="form-control" type="text" 
-[value]="employee.name">
-<input class="form-control" type="text"
- [value]="employee.email"
-  (change)="employee.email=$event.target.value">
-<input class="form-control" type="text" 
-[value]="employee.address" 
-(change)="employee.address=$event.target.value">
+<input class="form-control" type="text" [value]="employee.name">
+<input class="form-control" type="text" [value]="employee.email" (change)="employee.email=$event.target.value">
+<input class="form-control" type="text" [value]="employee.address" (change)="employee.address=$event.target.value">
 
 <div *ngIf="isHidden">
-  NgIf 
-  </div>
+  NgIf
+</div>
 
 <button class="btn btn-primary" (click)="toggleDiv()">
   Toggle
@@ -33,10 +28,10 @@
 <table class="table">
   <thead>
     <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Email</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Email</th>
     </tr>
   </thead>
   <tbody>
