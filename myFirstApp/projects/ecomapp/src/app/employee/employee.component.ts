@@ -47,4 +47,8 @@ export class EmployeeComponent implements OnInit {
     this.isHidden = !this.isHidden;
   }
 
+  update(event){
+  console.log(event)  
+  }
+
 }

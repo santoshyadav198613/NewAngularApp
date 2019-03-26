@@ -5,12 +5,20 @@
 <div [hidden]="isHidden" [innerText]="department">
 </div>
 
+<input class="form-control" type="text" 
+[value]="employee.name">
+<input class="form-control" type="text"
+ [value]="employee.email"
+  (change)="employee.email=$event.target.value">
+<input class="form-control" type="text" 
+[value]="employee.address" 
+(change)="employee.address=$event.target.value">
 
 <div *ngIf="isHidden">
   NgIf 
   </div>
 
-<button (click)="toggleDiv()">
+<button class="btn btn-primary" (click)="toggleDiv()">
   Toggle
 </button>
 
@@ -22,7 +30,7 @@
 
 <!-- {{empList}} -->
 
-<table>
+<table class="table">
   <thead>
     <tr>
         <th>ID</th>
