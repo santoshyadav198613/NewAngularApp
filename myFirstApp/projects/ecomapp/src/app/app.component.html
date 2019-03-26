@@ -2,3 +2,15 @@
 <div>
     <ecom-employee></ecom-employee>
  </div>
+
+ <div [ngSwitch]="role">
+     <div *ngSwitchCase="'Admin'">
+         This is admin section
+     </div>
+     <div *ngSwitchCase="'User'">
+            This is user section
+     </div>
+     <div *ngSwitchDefault>
+         This is default section
+     </div>
+ </div>
