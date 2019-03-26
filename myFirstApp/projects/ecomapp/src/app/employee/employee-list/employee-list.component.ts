@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, 
+  EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { IEmployee } from '../employee';
 
 @Component({
@@ -6,11 +7,15 @@ import { IEmployee } from '../employee';
   templateUrl: './employee-list.component.html',
   styleUrls: ['./employee-list.component.css']
 })
-export class EmployeeListComponent implements OnInit {
+export class EmployeeListComponent implements OnInit,OnChanges {
 
   @Input() employeeList : Array<IEmployee>;
   @Output() selectedEmployee = new EventEmitter<IEmployee>();
   constructor() { }
+
+  ngOnChanges(changes: SimpleChanges): void{
+    console.log(changes);
+  }
 
   ngOnInit() {
   }
