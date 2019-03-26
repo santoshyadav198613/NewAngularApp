@@ -2,6 +2,41 @@
   Employee Name {{name}}
 </h1>
 
-<div [innerText]="department">
-
+<div [hidden]="isHidden" [innerText]="department">
 </div>
+
+
+<div *ngIf="isHidden">
+  NgIf 
+  </div>
+
+<button (click)="toggleDiv()">
+  Toggle
+</button>
+
+<h1>Employee Details</h1>
+{{employee.id}}
+{{employee.name}}
+{{employee.email}}
+{{employee.address}}
+
+<!-- {{empList}} -->
+
+<table>
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of empList">
+      <td>{{employee.id}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.address}}</td>
+      <td>{{employee.email}}</td>
+    </tr>
+  </tbody>
+</table>
