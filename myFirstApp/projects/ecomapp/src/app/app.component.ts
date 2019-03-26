@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeService } from './employee/service/employee.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecomapp';
-  role= "Users";
+  role = "Users";
+
+  constructor(private empService: EmployeeService) { }
+
+  addEmployee() {
+    this.empService.addEmployee({
+      id: 4, name: 'Test4',
+      address: 'Pune',
+      email: 'Test5@gmail.com'
+    });
+  }
 }

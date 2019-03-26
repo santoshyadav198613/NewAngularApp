@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import { IEmployee } from './employee';
 import { HeaderComponent } from '../header/header.component';
+import { EmployeeService } from './service/employee.service';
 
 @Component({
   selector: 'ecom-employee',
@@ -24,7 +25,7 @@ export class EmployeeComponent implements OnInit,
   isHidden = false;
 
   className = "alert alert-danger";
-  constructor() { }
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
     this.employee = {
@@ -33,26 +34,7 @@ export class EmployeeComponent implements OnInit,
       email: 'Test@gmail.com',
       address: 'Mumbai'
     };
-    this.empList = [
-      {
-        id: 1,
-        name: 'Test',
-        email: 'Test@gmail.com',
-        address: 'Mumbai'
-      },
-      {
-        id: 2,
-        name: 'Test2',
-        email: 'Test2@gmail.com',
-        address: 'Mumbai'
-      },
-      {
-        id: 3,
-        name: 'Test3',
-        email: 'Test3@gmail.com',
-        address: 'Mumbai'
-      }
-    ];
+    this.empList = this.employeeService.getEmployee();
   }
 
   ngDoCheck(): void {
