@@ -1,0 +1,31 @@
+<h1>
+  Employee List
+</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>
+          Select Employee
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeList">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.email}}</td>
+        <td>
+          <button class="btn btn-primary"
+           (click)="currentEmployee(employee)">
+            Select Employee
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

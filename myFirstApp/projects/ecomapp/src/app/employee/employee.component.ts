@@ -53,4 +53,8 @@ export class EmployeeComponent implements OnInit {
   console.log(event)  
   }
 
+  receiveEmployee(employee: IEmployee ) {
+    this.employee = employee;
+  }
+
 }
