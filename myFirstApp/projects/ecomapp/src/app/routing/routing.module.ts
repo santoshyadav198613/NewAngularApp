@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MoviesComponent } from '../movies/movies.component';
 import { EmployeeComponent } from '../employee/employee.component';
 import { EmployeeOnboardingComponent } from '../employee-onboarding/employee-onboarding.component';
+import { AddressFormComponent } from '../address-form/address-form.component';
 
 @NgModule({
   declarations: [],
@@ -14,6 +15,7 @@ import { EmployeeOnboardingComponent } from '../employee-onboarding/employee-onb
       { path: 'movies' , component : MoviesComponent },
       { path: 'employee' , component : EmployeeComponent },
       { path: 'onboarding', component :  EmployeeOnboardingComponent},
+      {path:'addressForm' , component: AddressFormComponent },
       { path: '' , redirectTo:'onboarding', pathMatch: 'full' }
     ])
   ],

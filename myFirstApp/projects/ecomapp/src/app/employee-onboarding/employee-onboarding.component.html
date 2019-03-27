@@ -38,31 +38,35 @@
       <input class="form-control" type="number" formControlName="pin" placeholder="First Name">
     </div>
   </div>
-
+  <div class="form-group">
+    <button class="btn btn-success" (click)="addEmployer()">
+      Add Employer
+    </button>
+  </div>
   <div formArrayName="employment">
     <div *ngFor="let emp of onboardingForm['controls'].employment['controls']; let i=index">
       <div [formGroupName]="i">
-
         <div class="form-group">
           <input class="form-control" type="text" formControlName="orgName" placeholder="Employer Name">
         </div>
-
-
         <div class="form-group">
           <input class="form-control" type="text" formControlName="role" placeholder="Role">
         </div>
-
-
         <div class="form-group">
           <input class="form-control" type="date" formControlName="workedFrom" placeholder="worked From">
         </div>
-
-
         <div class="form-group">
           <input class="form-control" type="date" formControlName="workedTill" placeholder="worked Till">
         </div>
-
+        <div class="form-group">
+            <button class="btn btn-danger" (click)="removeEmployer(i)">
+              Remove Employer
+            </button>
+          </div>
       </div>
     </div>
   </div>
+  <button type="submit" class="btn btn-primary" [disabled]="onboardingForm.invalid">
+    Save
+  </button>
 </form>

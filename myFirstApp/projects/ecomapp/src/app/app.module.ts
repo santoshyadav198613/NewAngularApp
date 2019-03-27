@@ -12,6 +12,11 @@ import { MovieAddComponent } from './movies/movie-add/movie-add.component';
 import { MoviesearchPipe } from './movies/moviesearch.pipe';
 import { RoutingModule } from './routing/routing.module';
 import { EmployeeOnboardingComponent } from './employee-onboarding/employee-onboarding.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddressFormComponent } from './address-form/address-form.component';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -23,14 +28,27 @@ import { EmployeeOnboardingComponent } from './employee-onboarding/employee-onbo
     MovieListComponent,
     MovieAddComponent,
     MoviesearchPipe,
-    EmployeeOnboardingComponent
+    EmployeeOnboardingComponent,
+    AddressFormComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RoutingModule
+    RoutingModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
