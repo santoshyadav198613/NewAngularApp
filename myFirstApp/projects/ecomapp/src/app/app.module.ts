@@ -14,6 +14,7 @@ import { MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCa
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MaterialTableComponent } from './material-table/material-table.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MaterialTableComponent } from './material-table/material-table.componen
     EmployeeOnboardingComponent,
     AddressFormComponent,
     MainNavComponent,
-    MaterialTableComponent
+    MaterialTableComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,12 @@
 import { Component, OnInit, Input, Output, 
-  EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+  EventEmitter, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { IEmployee } from '../employee';
 
 @Component({
   selector: 'ecom-employee-list',
   templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  styleUrls: ['./employee-list.component.css'],
+  encapsulation : ViewEncapsulation.None
 })
 export class EmployeeListComponent implements OnInit,OnChanges {
 

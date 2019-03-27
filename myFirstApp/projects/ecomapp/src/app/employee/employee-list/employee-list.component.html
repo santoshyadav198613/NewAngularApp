@@ -5,6 +5,7 @@
 <table class="table">
     <thead>
       <tr>
+        <th>Even/Odd</th>
         <th>ID</th>
         <th>Name</th>
         <th>Address</th>
@@ -15,7 +16,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let employee of employeeList">
+      <tr [ngClass]="even? 'even' : 'odd'" *ngFor="let employee of employeeList; let even= even;let odd=odd">
+        <td>{{even}}  {{odd}}</td>
         <td>{{employee.id}}</td>
         <td>{{employee.name}}</td>
         <td>{{employee.address}}</td>
