@@ -1,0 +1,68 @@
+{{onboardingForm.invalid | json}}
+{{onboardingForm.valid | json}}
+{{onboardingForm.pristine | json}}
+{{onboardingForm.value | json}}
+
+<form [formGroup]="onboardingForm">
+  <div class="form-group">
+    <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+  </div>
+  <div class="form-group">
+    <select class="form-control" formControlName="gender">
+      <option *ngFor="let g of genders">
+        {{g}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="date" formControlName="dob" placeholder="First Name">
+  </div>
+  <div formGroupName="address">
+
+    <div class="form-group">
+      <input class="form-control" type="text" formControlName="addressLine1" placeholder="First Name">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" type="text" formControlName="addressLine2" placeholder="First Name">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" type="text" formControlName="city" placeholder="First Name">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" type="number" formControlName="pin" placeholder="First Name">
+    </div>
+  </div>
+
+  <div formArrayName="employment">
+    <div *ngFor="let emp of onboardingForm['controls'].employment['controls']; let i=index">
+      <div [formGroupName]="i">
+
+        <div class="form-group">
+          <input class="form-control" type="text" formControlName="orgName" placeholder="Employer Name">
+        </div>
+
+
+        <div class="form-group">
+          <input class="form-control" type="text" formControlName="role" placeholder="Role">
+        </div>
+
+
+        <div class="form-group">
+          <input class="form-control" type="date" formControlName="workedFrom" placeholder="worked From">
+        </div>
+
+
+        <div class="form-group">
+          <input class="form-control" type="date" formControlName="workedTill" placeholder="worked Till">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
