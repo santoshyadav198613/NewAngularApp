@@ -1,3 +1,31 @@
-<p>
-  movie-list works!
-</p>
+<h1>
+  Movie List
+</h1>
+
+<!-- {{movieList | json}} -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movieList| moviesearch : '2000' ">
+      <td>
+          {{movie.id | percent}}
+      </td>
+      <td>
+          {{movie.author | uppercase}}
+      </td>
+      <td>
+          {{movie.title | lowercase}}
+      </td>
+      <td>
+          {{movie.year }}
+      </td>
+    </tr>
+  </tbody>
+</table>

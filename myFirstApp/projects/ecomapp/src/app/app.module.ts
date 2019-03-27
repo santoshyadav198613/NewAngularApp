@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { MovieAddComponent } from './movies/movie-add/movie-add.component';
+import { MoviesearchPipe } from './movies/moviesearch.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MovieAddComponent } from './movies/movie-add/movie-add.component';
     HeaderComponent,
     MoviesComponent,
     MovieListComponent,
-    MovieAddComponent
+    MovieAddComponent,
+    MoviesearchPipe
   ],
   imports: [
     BrowserModule,

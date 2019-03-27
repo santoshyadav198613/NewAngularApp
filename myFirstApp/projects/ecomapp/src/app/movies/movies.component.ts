@@ -9,6 +9,8 @@ import { IMovie } from './service/movies';
 })
 export class MoviesComponent implements OnInit {
 
+  movies: Array<IMovie>;
+
   movie: IMovie = {
     id: 0,
     author: '',
@@ -20,7 +22,7 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit() {
     this.movieService.getMovies().
-      subscribe((data) => console.log(data));
+      subscribe((data) => this.movies = data);
   }
 
   saveMovie(movie: IMovie) {
