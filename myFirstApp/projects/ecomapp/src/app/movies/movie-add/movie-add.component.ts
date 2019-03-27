@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output ,EventEmitter } from '@angular/core';
 import { IMovie } from '../service/movies';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ecom-movie-add',
@@ -16,9 +17,10 @@ export class MovieAddComponent implements OnInit {
   };
 
   @Output() addMovie= new EventEmitter<IMovie>();
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe((data)=> console.log(data.get('id')));
   }
 
   saveMovie() {

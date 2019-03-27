@@ -6,6 +6,7 @@ import { MoviesComponent } from '../movies/movies.component';
 import { EmployeeComponent } from '../employee/employee.component';
 import { EmployeeOnboardingComponent } from '../employee-onboarding/employee-onboarding.component';
 import { AddressFormComponent } from '../address-form/address-form.component';
+import { MovieAddComponent } from '../movies/movie-add/movie-add.component';
 
 @NgModule({
   declarations: [],
@@ -16,6 +17,7 @@ import { AddressFormComponent } from '../address-form/address-form.component';
       { path: 'employee' , component : EmployeeComponent },
       { path: 'onboarding', component :  EmployeeOnboardingComponent},
       {path:'addressForm' , component: AddressFormComponent },
+      { path: "movies/:id" , component : MovieAddComponent },
       { path: '' , redirectTo:'onboarding', pathMatch: 'full' }
     ])
   ],
