@@ -14,9 +14,10 @@ import { RoutingModule } from './routing/routing.module';
 import { EmployeeOnboardingComponent } from './employee-onboarding/employee-onboarding.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddressFormComponent } from './address-form/address-form.component';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MaterialTableComponent } from './material-table/material-table.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MoviesearchPipe,
     EmployeeOnboardingComponent,
     AddressFormComponent,
-    MainNavComponent
+    MainNavComponent,
+    MaterialTableComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
