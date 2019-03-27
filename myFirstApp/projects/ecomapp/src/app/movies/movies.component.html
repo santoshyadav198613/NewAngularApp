@@ -1,4 +1,9 @@
-<ecom-movie-add [movie]="movie" (addMovie)="saveMovie($event)"></ecom-movie-add>
+<!-- 
+<ecom-movie-add [movie]="movie" (addMovie)="saveMovie($event)"></ecom-movie-add> -->
 
+<router-outlet></router-outlet>
+<button class="btn btn-primary" (click)="changeMovie()">
+    Change Movies
+</button>
 <hr/>
 <ecom-movie-list [movieList]="movies$ | async"></ecom-movie-list>

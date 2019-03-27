@@ -1,12 +1,13 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Self } from '@angular/core';
 import { MovieService } from './service/movie.service';
 import { IMovie } from './service/movies';
-import { Subscription, Observable } from 'rxjs';
+import { Subscription, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'ecom-movies',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.css']
+  styleUrls: ['./movies.component.css'],
+  providers: [MovieService]
 })
 export class MoviesComponent implements OnInit, OnDestroy {
 
@@ -23,7 +24,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
 
   movies$: Observable<Array<IMovie>>;
 
-  constructor(private movieService: MovieService) { }
+  constructor(@Self() private movieService: MovieService) { }
 
   ngOnInit() {
     // this.movieService.getMovies().
@@ -37,7 +38,20 @@ export class MoviesComponent implements OnInit, OnDestroy {
       .subscribe((data) => console.log(data));
   }
 
+  changeMovie(){
+    this.movies$ = this.getMovies();
+  }
 
+  getMovies() {
+    return of([
+      {
+        id: 100,
+        author: 'test',
+        title: 'test',
+        year : 2019
+      }
+    ]);
+  }
   ngOnDestroy() {
     }
 
