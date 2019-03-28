@@ -8,18 +8,26 @@ import { AddressFormComponent } from '../address-form/address-form.component';
 import { MaterialTableComponent } from '../material-table/material-table.component';
 import { AuthGuard } from '../auth.guard';
 import { LoginComponent } from '../login/login.component';
+import { CommentsComponent } from '../comments/comments.component';
+import { CommentGuard } from '../comments/service/comment.guard';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     RouterModule.forRoot([
-      { path: 'login', component : LoginComponent },
+      { path: 'login', component: LoginComponent },
       { path: 'movies', loadChildren: '../movies/movies.module#MoviesModule', canLoad: [AuthGuard] },
       { path: 'employee', component: EmployeeComponent, canActivate: [AuthGuard] },
       { path: 'onboarding', component: EmployeeOnboardingComponent },
       { path: 'addressForm', component: AddressFormComponent },
       { path: 'table', component: MaterialTableComponent },
+      {
+        path: 'comments', component: CommentsComponent, resolve:
+        {
+          commentList: CommentGuard
+        }
+      },
       { path: '', redirectTo: 'login', pathMatch: 'full' }
     ])
   ],

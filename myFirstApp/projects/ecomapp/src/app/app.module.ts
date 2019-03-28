@@ -15,6 +15,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MaterialTableComponent } from './material-table/material-table.component';
 import { LoginComponent } from './login/login.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginComponent } from './login/login.component';
     AddressFormComponent,
     MainNavComponent,
     MaterialTableComponent,
-    LoginComponent
+    LoginComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
