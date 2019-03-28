@@ -16,7 +16,7 @@ import { LoginComponent } from '../login/login.component';
     RouterModule.forRoot([
       { path: 'login', component : LoginComponent },
       { path: 'movies', loadChildren: '../movies/movies.module#MoviesModule', canLoad: [AuthGuard] },
-      { path: 'employee', component: EmployeeComponent, canActivate:[AuthGuard] },
+      { path: 'employee', component: EmployeeComponent, canActivate: [AuthGuard] },
       { path: 'onboarding', component: EmployeeOnboardingComponent },
       { path: 'addressForm', component: AddressFormComponent },
       { path: 'table', component: MaterialTableComponent },

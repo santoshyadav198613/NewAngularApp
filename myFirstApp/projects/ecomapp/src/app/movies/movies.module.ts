@@ -23,7 +23,7 @@ import { AuthGuard } from '../auth.guard';
         { path: ':id', component: MovieAddComponent },
         { path: 'edit/:id', component: MovieAddComponent }
       ] },
-    
+
     ]),
     FormsModule
   ]

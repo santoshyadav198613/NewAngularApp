@@ -9,7 +9,7 @@ export class EmployeeService {
   empList: Array<IEmployee>;
   constructor() { }
 
-  getEmployee(){
+  getEmployee() {
     this.empList = [
       {
         id: 1,

@@ -38,7 +38,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
       .subscribe((data) => console.log(data));
   }
 
-  changeMovie(){
+  changeMovie() {
     this.movies$ = this.getMovies();
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output ,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
 import { IMovie } from '../service/movies';
 import { ActivatedRoute } from '@angular/router';
 
@@ -16,11 +16,11 @@ export class MovieAddComponent implements OnInit {
     year : 0
   };
 
-  @Output() addMovie= new EventEmitter<IMovie>();
+  @Output() addMovie = new EventEmitter<IMovie>();
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe((data)=> console.log(data.get('id')));
+    this.route.paramMap.subscribe((data) => console.log(data.get('id')));
   }
 
   saveMovie() {

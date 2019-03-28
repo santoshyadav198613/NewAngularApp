@@ -11,7 +11,7 @@ import { EmployeeService } from './employee/service/employee.service';
 })
 export class AppComponent {
   title = 'ecomapp';
-  role = "Users";
+  role = 'Users';
 
   constructor(private empService: EmployeeService) { }
 

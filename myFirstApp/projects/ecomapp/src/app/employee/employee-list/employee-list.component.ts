@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, 
+import { Component, OnInit, Input, Output,
   EventEmitter, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { IEmployee } from '../employee';
 
@@ -8,13 +8,13 @@ import { IEmployee } from '../employee';
   styleUrls: ['./employee-list.component.css'],
   encapsulation : ViewEncapsulation.None
 })
-export class EmployeeListComponent implements OnInit,OnChanges {
+export class EmployeeListComponent implements OnInit, OnChanges {
 
-  @Input() employeeList : Array<IEmployee>;
+  @Input() employeeList: Array<IEmployee>;
   @Output() selectedEmployee = new EventEmitter<IEmployee>();
   constructor() { }
 
-  ngOnChanges(changes: SimpleChanges): void{
+  ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
   }
 

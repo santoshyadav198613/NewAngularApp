@@ -16,7 +16,7 @@ export class EmployeeOnboardingComponent implements OnInit {
   ngOnInit() {
     this.onboardingForm = this.fb.group(
       {
-        firstName: new FormControl('',Validators.required),
+        firstName: new FormControl('', Validators.required),
         lastName: new FormControl(''),
         gender: new FormControl('', Validators.email),
         dob: new FormControl(''),
@@ -39,16 +39,16 @@ export class EmployeeOnboardingComponent implements OnInit {
       role: new FormControl(''),
       workedFrom: new FormControl(''),
       workedTill: new FormControl('')
-    })
+    });
 
   }
   addEmployer() {
-    const employer = this.onboardingForm.controls['employment'] as FormArray;
+    const employer = this.onboardingForm.controls.employment as FormArray;
     employer.push(this.buildForm());
   }
 
   removeEmployer(i: number) {
-    const employer = this.onboardingForm.controls['employment'] as FormArray;
-    employer.removeAt(i);   
+    const employer = this.onboardingForm.controls.employment as FormArray;
+    employer.removeAt(i);
   }
 }

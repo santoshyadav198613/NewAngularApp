@@ -10,7 +10,7 @@ import { IMovie } from '../service/movies';
 })
 export class MovieListComponent implements OnInit {
 
-  @Input() movieList : Array<IMovie>;
+  @Input() movieList: Array<IMovie>;
   constructor() { }
 
   ngOnInit() {

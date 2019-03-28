@@ -8,7 +8,7 @@ export class LoginService {
   isLoggedIn = false;
   constructor() { }
 
-  login(){
+  login() {
     this.isLoggedIn = true;
   }
 }

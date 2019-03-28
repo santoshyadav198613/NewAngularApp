@@ -21,10 +21,10 @@ export class EmployeeComponent implements OnInit,
   employee: IEmployee;
   empList: Array<IEmployee>;
   name = 'Rajesh';
-  department = "IT";
+  department = 'IT';
   isHidden = false;
 
-  className = "alert alert-danger";
+  className = 'alert alert-danger';
   constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
@@ -49,7 +49,7 @@ export class EmployeeComponent implements OnInit,
     this.headerChildrenComp.forEach(
       (component: HeaderComponent) => {
         setTimeout(() => {
-          component.title = "Employee Details";
+          component.title = 'Employee Details';
         }, 0);
       });
 
@@ -61,7 +61,7 @@ export class EmployeeComponent implements OnInit,
   }
 
   update(event) {
-    console.log(event)
+    console.log(event);
   }
 
   receiveEmployee(employee: IEmployee) {
