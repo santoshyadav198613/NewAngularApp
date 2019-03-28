@@ -16,6 +16,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MaterialTableComponent } from './material-table/material-table.component';
 import { LoginComponent } from './login/login.component';
 import { CommentsComponent } from './comments/comments.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { CommentsComponent } from './comments/comments.component';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

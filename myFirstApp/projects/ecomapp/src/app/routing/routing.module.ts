@@ -28,7 +28,7 @@ import { CommentGuard } from '../comments/service/comment.guard';
           commentList: CommentGuard
         }
       },
-      { path: '', redirectTo: 'login', pathMatch: 'full' }
+      {  path: '', redirectTo: 'login', pathMatch: 'full' }
     ])
   ],
   exports: [RouterModule]

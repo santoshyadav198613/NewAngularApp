@@ -21,7 +21,8 @@
             "assets": [
               "projects/ecomapp/src/favicon.ico",
               "projects/ecomapp/src/assets",
-              "projects/ecomapp/src/assets/booklist.json"
+              "projects/ecomapp/src/assets/booklist.json",
+              "projects/ecomapp/src/manifest.json"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -53,7 +54,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "projects/ecomapp/ngsw-config.json"
             }
           }
         },
@@ -88,7 +91,8 @@
             "scripts": [],
             "assets": [
               "projects/ecomapp/src/favicon.ico",
-              "projects/ecomapp/src/assets"
+              "projects/ecomapp/src/assets",
+              "projects/ecomapp/src/manifest.json"
             ]
           }
         },
